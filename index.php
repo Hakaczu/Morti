@@ -1,4 +1,3 @@
 <?php
-    include "_class/DataBaseConnect.php";
-    $connect = new DataBaseConnect();
+    echo "Hello I'm Morti - Simple Budget Assistant"
 ?>
