@@ -7,10 +7,27 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "custom", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <header>
+        <h1>Morti</h1>
+        <nav>
+          <ul>
+            <li><%= link_to 'Home', root_path %></li>
+            <li><%= link_to 'Warchests', warchests_path %></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <%= yield %>
+      </main>
+      <footer>
+        <p>&copy; 2023 Morti. All rights reserved.</p>
+      </footer>
+    </div>
   </body>
 </html>

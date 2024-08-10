@@ -1,0 +1,17 @@
+<h1>Masowe aktualizowanie statusów Warchests</h1>
+
+<%= form_with url: update_statuses_warchests_path, method: :post do %>
+  <div>
+    <label for="status">Nowy status:</label>
+    <%= text_field_tag :status %>
+  </div>
+
+  <div>
+    <label for="warchest_ids">Wybierz Warchests:</label>
+    <%= collection_check_boxes(:warchest, :ids, @warchests, :id, :name) %>
+  </div>
+
+  <div>
+    <%= submit_tag "Zaktualizuj statusy" %>
+  </div>
+<% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_08_10_201700) do
+ActiveRecord::Schema[7.0].define(version: 2024_08_10_211628) do
   create_table "warchest_balances", force: :cascade do |t|
     t.integer "warchest_id", null: false
     t.decimal "balance"
@@ -25,6 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_10_201700) do
     t.decimal "balance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status"
   end
 
   add_foreign_key "warchest_balances", "warchests"

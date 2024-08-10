@@ -1,5 +1,6 @@
 <h1>Warchests</h1>
 <%= link_to 'New Warchest', new_warchest_path %>
+<%= link_to 'Masowe aktualizowanie statusów', bulk_update_status_warchests_path %>
 <ul>
   <% @warchests.each do |warchest| %>
     <li>

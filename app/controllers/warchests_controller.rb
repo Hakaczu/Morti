@@ -21,4 +21,14 @@ class WarchestsController < ApplicationController
   def warchest_params
     params.require(:warchest).permit(:name, :balance)
   end
+
+  def bulk_update_status
+    @warchests = Warchest.all
+  end
+
+  def update_statuses
+    Warchest.where(id: params[:warchest_ids]).update_all(status: params[:status])
+    redirect_to warchests_path, notice: 'Statusy zostały zaktualizowane.'
+  end
+
 end
