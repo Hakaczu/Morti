@@ -1,0 +1,9 @@
+<h1>Warchest Balances</h1>
+<%= link_to 'New Warchest Balance', new_warchest_warchest_balance_path(@warchest) %>
+<ul>
+  <% @warchest_balances.each do |balance| %>
+    <li>
+      <%= balance.month %>: <%= balance.balance %>
+    </li>
+  <% end %>
+</ul>

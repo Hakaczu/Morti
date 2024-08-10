@@ -1,0 +1,14 @@
+<h1>New Monthly Balance for <%= @warchest.name %></h1>
+<%= form_with model: [@warchest, @warchest_balance], local: true do |form| %>
+  <div>
+    <%= form.label :balance %>
+    <%= form.number_field :balance %>
+  </div>
+  <div>
+    <%= form.label :month %>
+    <%= form.date_select :month %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

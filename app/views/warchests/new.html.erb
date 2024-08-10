@@ -1,0 +1,14 @@
+<h1>New Warchest</h1>
+<%= form_with model: @warchest, local: true do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :balance %>
+    <%= form.number_field :balance, step: 0.01 %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
